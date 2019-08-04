@@ -16,8 +16,7 @@ Usage:
 Explanation:
 - First the script will determin which of the 2 files is shorter, and denote that as the primary.
 - Next, the script will determine how long to make the graphical outpt. Each pixel represents chunk_size worth of bits, compared, and coloured according to the number of differences. Each column will contain (chunk_size * image_depth) worth of memory bits. The initial output will be black, and based on the longer files length.
-- Starting at position 0 (counter) the files are compared byte by byte
-- If they are different a counter (bytes_differ) is increased.
-- Once the desired number of bytes has been compared (chunk_size) the script outputs the results as a file summary, colours the graphic pixel, and resets the difference counter back to 0.
+- Starting at position 0 (counter) the files are compared byte by byte.  If they are different a counter (bytes_differ) is increased.
+- Once the desired number of bytes has been compared (chunk_size) the script outputs the result to a file, colours the appropriate pixel in the display, and resets the difference counter back to 0.
 - This cycle repeats until the shorter file has been processed.
 - Any remaining bytes (of the longer file) are marked as differences.
