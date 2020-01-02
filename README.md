@@ -7,8 +7,11 @@ This software is provided 'as is' and with no warranties of any kind, whether ex
 ----
 
 Input:
+
  Multiple memory fragments, all the same size, sequentially numbered the same (eg: Memory1.raw, Memory2.raw, Memory3.raw, etc.)
+ 
 Output:
+
  Console output listing the size of the file + the number of differences
 
  Execution:
