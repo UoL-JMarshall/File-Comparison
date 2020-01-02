@@ -4,19 +4,22 @@ Tool written in Python 3 (with PIL library import) to help compare two files at 
 ** Disclaimer:
 This software is provided 'as is' and with no warranties of any kind, whether express or implied, including and without limitation, any warranty of merchantability or fitness for a particular purpose. The user (you) must assume the entire risk of using the software. In no event shall any individual, company or organization involved in any way in the development, sale or distribution of this software be liable for any damages whatsoever relating to the use, misuse, or inability to use this software (including, without limitation, damages for loss of profits, business interruption, loss of information, or any other loss). In short, I am not a professional programmer so use at your own risk!
 
-This scipt can be used to examine two memory files, to compare the differences, and output a text file containing the differences, along with a graphical output. 
-
-Usage:
-- Line 4 : The name and location of the first memory fragment.
-- Line 5 : THe name and location of the second memory fragment.
-- Line 6 : The name and location of the comparison results file.
-- Line 7 : Chunk size.
-- Line 8 : Image depth.
-
-Explanation:
-- First the script will determin which of the 2 files is shorter, and denote that as the primary.
-- Next, the script will determine how long to make the graphical outpt. Each pixel represents chunk_size worth of bits, compared, and coloured according to the number of differences. Each column will contain (chunk_size * image_depth) worth of memory bits. The initial output will be black, and based on the longer files length.
-- Starting at position 0 (counter) the files are compared byte by byte.  If they are different a counter (bytes_differ) is increased.
-- Once the desired number of bytes has been compared (chunk_size) the script outputs the result to a file, colours the appropriate pixel in the display, and resets the difference counter back to 0.
-- This cycle repeats until the shorter file has been processed.
-- Any remaining bytes (of the longer file) are marked as differences.
+# File Compare Function
+# Written by: Jason Marshall
+# Part of an MSC CyberSecurity
+#
+# Input:
+#   Multiple memory fragments, all the same size, sequentially numbered the same (eg: Memory1.raw, Memory2.raw, Memory3.raw, etc.)
+# Output:
+#   Console output listing the size of the file + the number of differences
+#
+# Execution:
+#   Change the 'filename' on line 64 to match the file name of the memory samples + change the sequence range in line 59 (x, y)
+#   Once started, the system will compare each file one by one.
+#   Change the chunksize (line 27) to read in a certain amount of data into memory at once.
+#
+#   For example:  if the range was (1, 5) then:
+#      filename1 would be compared to filename2
+#      filename2 would be compared to filename3
+#      filename3 would be compared to filename4
+#      Etc.
