@@ -17,8 +17,11 @@ Output:
  Execution:
  
 -- Change the 'filename' on line 64 to match the file name of the memory samples + change the sequence range in line 59 (x, y)
+
 -- Once started, the system will compare each file one by one.
+
 -- Change the chunksize (line 27) to read in a certain amount of data into memory at once.
+
 
 -- For example:  if the range was (1, 5) then:
 ----- filename1 would be compared to filename2
