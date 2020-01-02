@@ -24,7 +24,11 @@ Output:
 
 
 -- For example:  if the range was (1, 5) then:
+
 ----- filename1 would be compared to filename2
+
 ----- filename2 would be compared to filename3
+
 ----- filename3 would be compared to filename4
+
 ----- Etc.
